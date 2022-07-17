@@ -3,8 +3,8 @@ import React from 'react';
 interface ButtonProps {
   label: string;
   variant: 'primary' | 'secondary' | 'tertiary';
-  disabled: boolean;
-  loading: boolean;
+  disabled?: boolean;
+  loading?: boolean;
   iconPosition: 'left' | 'right' | undefined;
   loadingIcon: string;
   icon: string;
