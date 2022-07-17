@@ -1,4 +1,7 @@
 import React from 'react';
+import './button.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 interface ButtonProps {
   label: string;
@@ -6,23 +9,27 @@ interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   iconPosition: 'left' | 'right' | undefined;
-  loadingIcon: string;
-  icon: string;
-  // loadingIcon: SVGAElement;
-  // icon: SVGAElement;
+  loadingIcon: any;
+  icon: any;
 }
 
 const Button = ({
   label,
-  variant,
-  disabled,
-  loading,
-  loadingIcon,
+  variant = 'primary',
+  disabled = false,
+  loading = false,
+  loadingIcon = <FontAwesomeIcon icon={faSpinner} className="fa-spin" />,
   icon,
-  iconPosition
+  iconPosition,
+  ...props
 }: ButtonProps) => {
   return (
-    <button disabled={disabled} className={'core-button ' + variant}>
+    <button
+      type="button"
+      disabled={disabled}
+      className={'core-button ' + variant}
+      {...props}
+    >
       {iconPosition === 'left' && icon}
       {loading ? loadingIcon : label}
       {iconPosition === 'right' && icon}

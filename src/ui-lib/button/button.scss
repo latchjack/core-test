@@ -1,9 +1,31 @@
 .core-button {
-  padding: 1rem;
-  font-family: 'Dank Mono';
-}
+  padding: 1rem 1.5rem;
+  font-family: 'Helvetica';
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  line-height: 1;
 
-.primary {
-  background-color: orangered;
-  color: white;
+  &.primary {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  &.secondary {
+    background-color: orange;
+    color: white;
+  }
+
+  &.tertiary {
+    background-color: none;
+    color: white;
+  }
+
+  &.core-button:disabled {
+    background-color: grey;
+  }
 }

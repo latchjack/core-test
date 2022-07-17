@@ -1,5 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket } from '@fortawesome/free-solid-svg-icons';
 
 import Button from './button';
 
@@ -45,4 +47,20 @@ Loading.args = {
   variant: 'primary',
   label: 'Button',
   loading: true
+};
+
+export const IconLeft = Template.bind({});
+IconLeft.args = {
+  variant: 'primary',
+  label: 'Button',
+  icon: <FontAwesomeIcon icon={faRocket} />,
+  iconPosition: 'left'
+};
+
+export const IconRight = Template.bind({});
+IconRight.args = {
+  variant: 'primary',
+  label: 'Button',
+  icon: <FontAwesomeIcon icon={faRocket} />,
+  iconPosition: 'right'
 };
