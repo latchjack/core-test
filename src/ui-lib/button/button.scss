@@ -10,7 +10,7 @@
 	flex-direction: row;
 	gap: 0.5rem;
 	line-height: 1;
-	min-width: 7rem;
+	min-width: 8.5rem;
 	min-height: 3rem;
 	position: relative;
 
@@ -50,6 +50,18 @@
 		position: absolute;
 		left: 0;
 		right: 0;
+		top: calc(50% - 7px);
+	}
+
+	& .icon-left {
+		position: absolute;
+		left: 1rem;
+		top: calc(50% - 7px);
+	}
+
+	& .icon-right {
+		position: absolute;
+		right: 1rem;
 		top: calc(50% - 7px);
 	}
 }

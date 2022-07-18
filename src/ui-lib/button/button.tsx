@@ -8,9 +8,9 @@ interface ButtonProps {
 	variant: 'primary' | 'secondary' | 'tertiary';
 	disabled?: boolean;
 	loading?: boolean;
-	iconPosition: 'left' | 'right' | undefined;
+	iconPosition?: 'left' | 'right' | undefined;
 	loadingIcon: any;
-	icon: any;
+	icon?: any;
 }
 
 const Button = ({
@@ -30,11 +30,12 @@ const Button = ({
 			className={'core-button ' + variant}
 			{...props}
 		>
-			{iconPosition === 'left' && icon}
-			{/* {loading ? loadingIcon : label} */}
+			<span className="icon-left">{iconPosition === 'left' && icon}</span>
 			<span className="loading">{loading && loadingIcon}</span>
 			<span className="btn-label">{!loading && label}</span>
-			{iconPosition === 'right' && icon}
+			<span className="icon-right">
+				{iconPosition === 'right' && icon}
+			</span>
 		</button>
 	);
 };
