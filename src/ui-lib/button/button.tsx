@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import './button.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -9,8 +9,8 @@ interface ButtonProps {
 	disabled?: boolean;
 	loading?: boolean;
 	iconPosition?: 'left' | 'right' | undefined;
-	loadingIcon: any;
-	icon?: any;
+	loadingIcon: ReactNode;
+	icon?: ReactNode;
 }
 
 const Button = ({
