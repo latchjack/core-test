@@ -10,6 +10,9 @@
 	flex-direction: row;
 	gap: 0.5rem;
 	line-height: 1;
+	min-width: 7rem;
+	min-height: 3rem;
+	position: relative;
 
 	&.primary {
 		background-color: blueviolet;
@@ -22,11 +25,31 @@
 	}
 
 	&.tertiary {
-		background-color: none;
-		color: white;
+		background-color: transparent;
+		color: black;
 	}
 
 	&.core-button:disabled {
 		background-color: grey;
+	}
+
+	&.core-button:hover {
+		-webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+	}
+
+	& .loading {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: calc(50% - 7px);
+	}
+
+	& .btn-label {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: calc(50% - 7px);
 	}
 }

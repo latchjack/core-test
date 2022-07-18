@@ -31,7 +31,9 @@ const Button = ({
 			{...props}
 		>
 			{iconPosition === 'left' && icon}
-			{loading ? loadingIcon : label}
+			{/* {loading ? loadingIcon : label} */}
+			<span className="loading">{loading && loadingIcon}</span>
+			<span className="btn-label">{!loading && label}</span>
 			{iconPosition === 'right' && icon}
 		</button>
 	);
