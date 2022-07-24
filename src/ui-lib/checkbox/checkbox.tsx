@@ -1,4 +1,5 @@
 import React from 'react';
+import './checkbox.scss';
 
 type CheckboxProps = {
 	checked: boolean;
