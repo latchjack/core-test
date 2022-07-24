@@ -9,6 +9,8 @@
 -   navbar
 -   drop-menu
 -   sidebar
+-   footer
+-   divider
 
 ### UI-Lib
 
@@ -25,3 +27,5 @@
 -   tag
 -   error
 -   character-count
+-   asterisk
+-   tooltip
