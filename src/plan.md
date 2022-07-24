@@ -10,6 +10,8 @@
 -   drop-menu
 -   sidebar
 -   footer
+-   welcome
+-   breadcrumbs
 -   divider
 
 ### UI-Lib
@@ -17,9 +19,13 @@
 -   select
 -   form-select
 -   form-checkbox
+-   form-container
+-   text-area
+-   form-area
 -   headers
 -   typography
 -   panel
+-   panel-loader
 -   back arrow
 -   icon
 -   image
@@ -29,3 +35,5 @@
 -   character-count
 -   asterisk
 -   tooltip
+-   spinner
+-   toggle

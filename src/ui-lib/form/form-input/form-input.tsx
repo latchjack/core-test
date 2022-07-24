@@ -6,6 +6,7 @@ import Input from '../input';
 interface FormInputProps {
 	name: string;
 	label: string;
+	id: string;
 	hasCount: boolean;
 	maxCount: number;
 	onChange: FormEventHandler<HTMLInputElement>;
@@ -16,6 +17,7 @@ interface FormInputProps {
 const FormInput: FC<FormInputProps> = ({
 	name,
 	label,
+	id,
 	hasCount,
 	maxCount,
 	onChange,
@@ -36,12 +38,14 @@ const FormInput: FC<FormInputProps> = ({
 
 	return (
 		<Field
-			error={errors?.[name]?.message}
 			label={label}
+			id={id}
+			error={errors?.[name]?.message}
 			hasCount={hasCount}
 			count={count}
 			maxCount={maxCount}
 			isRequired={isRequired}
+			dataTestId={`${dataTestId}-field`}
 			{...register(name)}
 		>
 			<Input

@@ -26,7 +26,10 @@ const Field: FC<FieldProps> = ({
 	return (
 		<div className="form-field-container">
 			{hasCount && (
-				<p className="form-field-count">{`${count / maxCount}`}</p>
+				<p
+					data-testid={`${dataTestId}-field-count`}
+					className="form-field-count"
+				>{`${count / maxCount}`}</p>
 			)}
 			<div className="form-field-label-container">
 				<label
