@@ -64,3 +64,9 @@ IconRight.args = {
 	icon: <FontAwesomeIcon icon={faRocket} />,
 	iconPosition: 'right',
 };
+
+export const LongWord = Template.bind({});
+LongWord.args = {
+	variant: 'primary',
+	label: 'SpottieOttieDopaliscious',
+};
