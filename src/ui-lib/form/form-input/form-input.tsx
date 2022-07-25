@@ -46,7 +46,7 @@ const FormInput: FC<FormInputProps> = ({
 			maxCount={maxCount}
 			isRequired={isRequired}
 			dataTestId={`${dataTestId}-field`}
-			{...register(name)
+			{...register(name)}
 		>
 			<Input
 				name={name}
